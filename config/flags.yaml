@@ -1,0 +1,2 @@
+features:
+  checkout_v2: false   # rollout flag, remove once 100%
