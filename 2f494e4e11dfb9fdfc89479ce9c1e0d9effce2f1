@@ -1,0 +1,1 @@
+{"v":1,"sessions":{"0718293a4b5c6d7e8f90a1b2c3d4e5f6":{"agent":"bob","author":"demo","ts":"2026-09-27T07:13:40.179Z","prompt":"Add region_names() to src/shop/rates.py returning the sorted region codes.","cost":null}},"ranges":[{"file":"src/shop/rates.py","lines":[7,10],"origin":"ai","session":"0718293a4b5c6d7e8f90a1b2c3d4e5f6"}],"items":[]}
