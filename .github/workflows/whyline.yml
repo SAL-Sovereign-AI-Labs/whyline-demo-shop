@@ -1,0 +1,20 @@
+name: whyline
+on:
+  pull_request:
+  workflow_dispatch:
+jobs:
+  temporary-code:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Fetch the Whyline notes (the prompt record lives in git notes)
+        run: git fetch origin 'refs/notes/*:refs/notes/*'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Install whyline
+        run: npm install -g github:SAL-Sovereign-AI-Labs/whyline
+      - name: Fail if temporary code is past its condition
+        run: whyline check --gate
