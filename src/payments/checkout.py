@@ -1,8 +1,8 @@
 from ..shop.pricing import with_tax
-from .mock_gateway import MockGateway
+from .gateway import Gateway
 
 
 def checkout(order, region="pk"):
     total = with_tax(order.total(), region)
-    MockGateway().charge(total)
+    Gateway().charge(total)
     return total
